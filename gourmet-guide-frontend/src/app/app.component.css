@@ -1,0 +1,40 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.footer-container {
+  margin-top: 50px;
+}
+
+span {
+  font-size: 15px;
+  text-align: right;
+}
+
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#logo {
+  margin-left: 5px;
+}
+
+#app_title {
+  font-size: large;
+}
+
+.round-image {
+  border-radius: 50%;
+}
+
+.header {
+  background-color: #BA4A00;
+  color: white;
+}
+
+.footer {
+  background-color: #BA4A00;
+}

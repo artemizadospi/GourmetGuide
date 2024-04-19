@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ebd2f52e-b371-4c6b-97ca-484655b76093" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/ConnectvilleApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/GourmetGuideApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/configuration/ApplicationConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/configuration/ApplicationConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/configuration/MvcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/configuration/MvcConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/configuration/UserSecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/configuration/UserSecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/controller/HealthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/controller/HealthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/controller/NewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/controller/NewsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/controller/config/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/controller/config/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/dtos/CreateAndEditNewsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/dtos/CreateAndEditNewsDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/dtos/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/dtos/LoginRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/dtos/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/dtos/LoginResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/dtos/ResponseCommentDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/dtos/ResponseCommentDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/dtos/ResponseNewsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/dtos/ResponseNewsDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/dtos/SignUpRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/dtos/SignUpRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/exception/InvalidCredentialsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/exception/InvalidCredentialsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/exception/NewsNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/exception/NewsNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/exception/UserNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/exception/UserNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/model/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/model/Group.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/model/GroupNews.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/model/GroupNews.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/model/News.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/model/News.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/model/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/model/UserComment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/model/UserComment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/model/UserFollow.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/model/UserFollow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/model/UserLike.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/model/UserLike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/repository/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/repository/CommentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/repository/GroupNewsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/repository/GroupNewsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/repository/GroupRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/repository/GroupRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/repository/LikeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/repository/LikeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/repository/NewsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/repository/NewsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/repository/UserFollowRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/repository/UserFollowRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/security/CustomUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/security/CustomUserDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/security/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/security/CustomUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/service/JWTUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/service/JWTUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/service/NewsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/service/NewsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/connectville/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/main/java/com/db/gourmetguide/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gourmet-guide-backend/src/test/java/com/db/connectville/ConnectvilleApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gourmet-guide-backend/src/test/java/com/db/gourmetguide/GourmetGuideApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gourmet-guide-frontend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gourmet-guide-frontend.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/karma.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/karma.conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/477-4772241_deutsche-bank-logo-transparent-transparent-background-deutsche-bank-ag-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/WhatsApp Image 2022-01-11 at 09.42.19.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/mock1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2dmGZuX83fzvKwHPeE2pUcQM26b" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/OneDrive - Universitatea Politehnica Bucuresti/Cursuri/Anul 4/Semestrul 2/IDP/project/complete-project/gourmet-guide-frontend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.Angular CLI Server.executor&quot;: &quot;Run&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\OneDrive - Universitatea Politehnica Bucuresti\\Cursuri\\Anul 4\\Semestrul 2\\IDP\\project\\complete-project\\gourmet-guide-frontend\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\OneDrive - Universitatea Politehnica Bucuresti\Cursuri\Anul 4\Semestrul 2\IDP\proiect\Complete-Project\gourmet-guide-frontend\src\assets" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="Tests (connectville-frontend)" type="JavaScriptTestRunnerKarma">
+      <config-file value="$PROJECT_DIR$/karma.conf.js" />
+      <karma-package-dir value="$PROJECT_DIR$/node_modules/@angular/cli" />
+      <working-directory value="$PROJECT_DIR$" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ebd2f52e-b371-4c6b-97ca-484655b76093" name="Changes" comment="" />
+      <created>1710605899240</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710605899240</updated>
+      <workItem from="1710605901189" duration="5416000" />
+      <workItem from="1710692127687" duration="599000" />
+      <workItem from="1710786707692" duration="274000" />
+      <workItem from="1710786990557" duration="9682000" />
+      <workItem from="1711201028118" duration="567000" />
+      <workItem from="1711203701034" duration="1250000" />
+      <workItem from="1711206599704" duration="516000" />
+      <workItem from="1711207171650" duration="382000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

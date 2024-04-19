@@ -1,0 +1,14 @@
+.main-div mat-card {
+    padding: 0px;
+    margin-top: 50px;
+  }
+  
+  .signup-form {
+    padding: 20px;
+  }
+
+  .header {
+    background-color: #BA4A00;
+    color: white;
+  }
+  
