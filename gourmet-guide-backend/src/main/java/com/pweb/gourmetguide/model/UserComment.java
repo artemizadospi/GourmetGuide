@@ -29,8 +29,8 @@ public class UserComment {
     private int userId;
     @JsonBackReference
     @ManyToOne
-    @JoinColumn(name = "news_id")
-    private News news;
+    @JoinColumn(name = "post_id")
+    private Post post;
     @Column(nullable = false)
     private String text;
     @Column(nullable = false)

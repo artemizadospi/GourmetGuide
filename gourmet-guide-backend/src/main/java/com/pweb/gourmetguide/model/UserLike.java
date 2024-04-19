@@ -26,11 +26,11 @@ public class UserLike {
     private int userId;
     @JsonBackReference
     @ManyToOne
-    @JoinColumn(name = "news_id")
-    private News news;
+    @JoinColumn(name = "post_id")
+    private Post post;
 
-    public void setNews(News news) {
-        this.news = news;
-        news.getLikes().add(this);
+    public void setPost(Post post) {
+        this.post = post;
+        post.getLikes().add(this);
     }
 }

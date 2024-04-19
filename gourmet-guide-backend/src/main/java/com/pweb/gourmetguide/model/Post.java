@@ -23,12 +23,12 @@ import java.util.List;
 import java.util.Set;
 
 @Entity
-@Table(name = "news")
+@Table(name = "posts")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class News {
+public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
@@ -45,10 +45,6 @@ public class News {
     private User publisher;
     @Column
     private Date publishDate;
-    @Column(name = "topics")
-    @ElementCollection
-    @CollectionTable(name = "news_topics", joinColumns = @JoinColumn(name = "id"))
-    private Set<String> topics;
     @JsonManagedReference
     @OneToMany(targetEntity = UserLike.class, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<UserLike> likes;
