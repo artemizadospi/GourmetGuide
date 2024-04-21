@@ -2,6 +2,21 @@
   flex: 1 1 auto;
 }
 
+.mat-raised-button {
+  margin-right: 5px;
+}
+
+.create-post {
+  background-color: #E59866;
+  color: white;
+}
+
+.mat-toolbar-row {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
 .footer-container {
   margin-top: 50px;
 }
@@ -26,6 +41,31 @@ span {
   font-size: large;
 }
 
+homepage-icon {
+  margin-left: 10px;
+  font-size: 26px;
+}
+
+.home-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+#welcome_tag {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-weight: bold;
+  color: #BA4A00;
+}
+
+#welcome_avatar {
+  font-size: 10px;
+  margin-left: 10px;
+}
+
 .round-image {
   border-radius: 50%;
 }
@@ -37,4 +77,47 @@ span {
 
 .footer {
   background-color: #BA4A00;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: row; /* Change flex-direction to row */
+  align-items: center;
+  justify-content: center;
+}
+
+.search-field-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 8px; /* Add margin to create space between search box and button */
+}
+
+.search-field {
+  height: 28px;
+  width: 300px;
+  border-radius: 18px;
+  border-color: #BA4A00;
+  background-color: rgb(251, 238, 230);
+  outline-color: none;
+  padding-right: 36px;
+}
+
+.clear-button {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  color: #888;
+  cursor: pointer;
+}
+
+.search-button {
+  height: 36px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 18px;
+  background-color: #E59866;
+  color: #fff;
+  cursor: pointer;
 }

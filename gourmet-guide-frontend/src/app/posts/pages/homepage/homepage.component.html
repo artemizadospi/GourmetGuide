@@ -1,0 +1,13 @@
+<div class="container" fxLayout fxLayoutAlign="center" fxLayoutGap="10px" fxLayoutGap.xs="0">
+  <div class="cards-container">
+    <app-posts-card
+      (deleted)="onPostDelete(post.id)"
+      *ngFor="let post of postsList"
+      [post]="post"
+    ></app-posts-card>
+  </div>
+</div>
+
+<div class="bottom-paginator">
+  <mat-paginator *ngIf="totalPosts >= 4" [length]="totalPosts" [pageSize]="4" [pageIndex]="commentService.pageIndex" (page)="onPageChange($event)"></mat-paginator>
+</div>

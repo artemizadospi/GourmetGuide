@@ -1,0 +1,82 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  margin: auto;
+  align-items: center;
+  margin-top: -50px;
+}
+
+.item {
+  padding: 1em;
+}
+
+.container {
+  margin-top: 100px;
+}
+
+.mat-paginator {
+  background-color: rgb(251, 238, 230);
+}
+
+bottom-paginator {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+::ng-deep .mat-paginator-page-size,
+::ng-deep .mat-paginator-range-label,
+::ng-deep .mat-paginator-page-size-label {
+  display: none !important;
+}
+
+::ng-deep .mat-paginator-navigation {
+  justify-content: center;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-field-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.search-field {
+  height: 28px;
+  width: 300px;
+  border-radius: 18px;
+  background-color: white;
+  outline-color: none;
+  padding-right: 36px;
+}
+
+.clear-button {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  color: #888;
+  cursor: pointer;
+}
+
+.search-button {
+  height: 36px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 18px;
+  background-color: #BA4A00;
+  color: #fff;
+  cursor: pointer;
+}

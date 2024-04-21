@@ -37,6 +37,6 @@ body {
   background-color: rgb(251, 238, 230);
 }
 
-app-news-card .mat-card-header-text {
+app-posts-card .mat-card-header-text {
   flex-grow: 1;
 }

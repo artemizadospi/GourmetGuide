@@ -1,0 +1,9 @@
+<mat-card *ngFor="let comment of commentList">
+  <mat-card-subtitle>{{ comment.userName }}</mat-card-subtitle>
+
+  <mat-card-content
+    ><p>{{ comment.text }}</p></mat-card-content>
+</mat-card>
+<div class="bottom-paginator">
+  <mat-paginator *ngIf="totalComments >= 4" [length]="totalComments" [pageSize]="4" (page)="onPageChange($event)"></mat-paginator>
+</div>

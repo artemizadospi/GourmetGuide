@@ -1,0 +1,74 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <img
+      mat-card-avatar
+      src="../../../../assets/blank-profile-picture-g19ba23f36_640.png"
+    />
+    <mat-card-title
+      >{{ post.publisher }}
+      <mat-icon *ngIf="post.pinned">push_pin</mat-icon></mat-card-title
+    >
+
+    <button
+      mat-fab
+      style="background-color: #BA4A00; color: white;"
+      aria-label="Example icon button with a delete icon"
+      matTooltip="Delete Post"
+      (click)="deletePost()"
+      *appPermission="'admin'"
+    >
+      <mat-icon>delete</mat-icon>
+    </button>
+
+    <button
+      mat-fab
+      style="background-color: #BA4A00; color: white;"
+      aria-label="Example icon button with a bookmark icon"
+      matTooltip="Pin Post"
+      (click)="pinPost()"
+      *appPermission="'admin'"
+    >
+      <mat-icon>bookmark</mat-icon>
+    </button>
+    <mat-card-subtitle
+      >Posted at
+      {{
+        post.publishDate.toLocaleString().split("T")[0] +
+          " " +
+          post.publishDate.toLocaleString().split("T")[1].split(".")[0]
+      }}</mat-card-subtitle
+    >
+  </mat-card-header>
+  <ng-container *ngIf="post.image">
+    <img mat-card-image [src]="'data:image/jpeg;base64,' + post.image" style="width: 532px; height: 400px;"/>
+  </ng-container>
+
+  <mat-card-content>
+    <p>
+      {{ post.title }}
+    </p>
+    <p>
+      {{ post.text }}
+    </p>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <div class="flex-container">
+      <div class="icons-container">
+        <i class="material-icons" (click)="pressLikePost()" matTooltip="{{post.likes.length}}">{{likedByUser()? "thumb_up" : "thumb_up_off_alt"}}</i>
+        <i
+          class="material-icons"
+          (click)="openDialog()"
+          matTooltip="Add Comment"
+          >add_comment</i
+        >
+        <i
+          class="material-icons"
+          (click)="openDialogSeeComments()"
+          matTooltip="See Comments"
+          >comment</i
+        >
+      </div>
+    </div>
+  </mat-card-actions>
+</mat-card>

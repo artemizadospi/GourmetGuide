@@ -1,0 +1,33 @@
+.mat-card-subtitle {
+  color: black;
+  font-weight: bold;
+}
+
+.mat-card {
+  margin-bottom: 20px;
+}
+
+img {
+  height: 30px;
+  width: 30px;
+}
+
+.mat-paginator {
+  background-color: white;
+}
+
+bottom-paginator {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+::ng-deep .mat-paginator-page-size,
+::ng-deep .mat-paginator-range-label,
+::ng-deep .mat-paginator-page-size-label {
+  display: none !important;
+}
+
+::ng-deep .mat-paginator-navigation {
+  justify-content: center;
+}

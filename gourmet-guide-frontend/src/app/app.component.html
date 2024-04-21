@@ -4,8 +4,68 @@
       <mat-toolbar class="header">
         <span id="app_title" fxLayoutAlign="center">GourmetGuide</span>
         <img id="logo" src="../assets/logo.jpg" alt="" style="width: 50px; height: 50px;" class="round-image"/>
+        <button
+          matTooltip="Homepage"
+          class="home-button"
+          (click)="homepageClicked()"
+          *ngIf="router.url !== '/login' && router.url !== '/signup'"
+          >
+          <mat-icon class="homepage-icon">home</mat-icon>
+        </button>
+        
+        <div class="spacer"></div>
+        
+        <div class="search-container" *ngIf="router.url !== '/login' && router.url !== '/signup' && router.url !== '/createPost'">
+          <div class="search-field-container">
+            <input type="text" [(ngModel)]="searchQuery" class="search-field" placeholder="Search recipes...">
+            <button mat-icon-button class="clear-button" (click)="resetSearch()">
+              <mat-icon>close</mat-icon>
+            </button>
+          </div>
+          <button mat-raised-button color="primary" class="search-button" (click)="onSearch()">Search</button>
+        </div>
+
+        <div class="spacer"></div>
+
+        <button
+          *ngIf="router.url !== '/login' && router.url !== '/signup' && router.url !== '/createPost'"
+          mat-raised-button
+          matTooltip="Filter Starter Space"
+          (click)="filterClick('Starter')"
+        >
+          Starter
+        </button>
+        <button
+          *ngIf="router.url !== '/login' && router.url !== '/signup' && router.url !== '/createPost'"
+          mat-raised-button
+          matTooltip="Filter MainCourse Space"
+          (click)="filterClick('MainCourse')"
+        >
+          MainCourse
+        </button>
+        <button
+          *ngIf="router.url !== '/login' && router.url !== '/signup' && router.url !== '/createPost'"
+          mat-raised-button
+          matTooltip="Filter Dessert Space"
+          (click)="filterClick('Dessert')"
+        >
+          Dessert
+        </button>
+        <button
+          *ngIf="router.url !== '/login' && router.url !== '/signup'"
+          mat-raised-button
+          matTooltip="Leave Page"
+          class="create-post"
+          (click)="logoutClicked()"
+        >
+          Logout
+        </button>
       </mat-toolbar>
     </div>
+      <span *ngIf="router.url !== '/login' && router.url !== '/signup' && router.url !== '/createPost'" id="welcome_tag">Welcome, {{authService.getName()}} <img
+        mat-card-avatar id="welcome_avatar"
+        src="../../../../assets/blank-profile-picture-g19ba23f36_640.png"/>
+      </span>
     <router-outlet></router-outlet>
   </div>
   <footer class="footer-container">

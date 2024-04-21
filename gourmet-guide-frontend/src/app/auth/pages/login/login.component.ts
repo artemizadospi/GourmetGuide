@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
       )
       .subscribe({
         next: () => {
-          console.log("login successful!")
+          this.router.navigate(['/homepage']);
         },
         error: () => {
           this.showInvalidCredentialsMessage();

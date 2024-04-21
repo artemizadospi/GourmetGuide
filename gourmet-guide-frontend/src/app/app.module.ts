@@ -30,7 +30,12 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/pages/login/login.component';
+import { HomepageComponent } from './posts/pages/homepage/homepage.component';
 import { AuthenticationInterceptor } from './auth/helpers/authentication.interceptor';
+import { DialogOverviewComponent } from './posts/components/dialog-overview/dialog-overview.component';
+import { PostCardComponent } from './posts/components/posts-card/posts-card.component';
+import { CommentsPopUpComponent } from './posts/components/comments-pop-up/comments-pop-up.component';
+import { PermissionDirective } from './posts/directives/permission.directive';
 import { SignupComponent } from './auth/pages/signup/signup.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
@@ -39,7 +44,12 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     AppComponent,
     LoginComponent,
     SignupComponent,
-    SignupComponent,
+    HomepageComponent,
+    DialogOverviewComponent,
+    PostCardComponent,
+    CommentsPopUpComponent,
+    PermissionDirective,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
