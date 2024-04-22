@@ -4,6 +4,7 @@ import com.pweb.gourmetguide.dtos.ResponseCommentDTO;
 import com.pweb.gourmetguide.dtos.ResponsePostDTO;
 import com.pweb.gourmetguide.dtos.UserCommentDTO;
 import com.pweb.gourmetguide.exception.CommentNotFoundException;
+import com.pweb.gourmetguide.exception.CommentConflictException;
 import com.pweb.gourmetguide.exception.PostNotFoundException;
 import com.pweb.gourmetguide.model.Post;
 import com.pweb.gourmetguide.model.UserComment;
@@ -14,9 +15,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 import com.pweb.gourmetguide.model.User;
-import org.springframework.web.bind.annotation.RequestBody;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 import java.util.Optional;
@@ -61,6 +60,8 @@ public class CommentService {
         if (currentUser.getId() == loggedInUser.getId()) {
             rezPost.getComments().remove(comment.get());
             commentRepository.deleteById(commentId);
+        } else {
+            throw new CommentConflictException();
         }
     }
 
@@ -74,11 +75,17 @@ public class CommentService {
             throw new CommentNotFoundException();
         }
         UserComment commentValue = rezComment.get();
-        if (!text.isEmpty())
-            commentValue.setText(text);
-        commentRepository.save(commentValue);
-        return new UserCommentDTO(commentValue.getId(), commentValue.getUserId(), commentValue.getPost().getId(),
-                commentValue.getText(), commentValue.getDate());
+        User currentUser = userRepository.getUserById(commentValue.getUserId());
+        User loggedInUser = postService.getLoggedInUser(http.getHeader("Authorization"));
+        if (currentUser.getId() == loggedInUser.getId()) {
+            if (!text.isEmpty())
+                commentValue.setText(text);
+            commentRepository.save(commentValue);
+            return new UserCommentDTO(commentValue.getId(), commentValue.getUserId(), commentValue.getPost().getId(),
+                    commentValue.getText(), commentValue.getDate());
+        } else {
+            throw new CommentConflictException();
+        }
     }
 
     public ResponsePostDTO commentOnPostById(int id, String comment, HttpServletRequest http) {
