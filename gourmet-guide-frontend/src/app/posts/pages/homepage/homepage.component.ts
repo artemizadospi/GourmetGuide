@@ -11,6 +11,10 @@ import { CommentService } from '../../service/comment.service';
 export interface DialogData {
   postId: number;
   comment: string;
+  title: string;
+  text: string;
+  cop: string;
+  image: File;
 }
 
 @Component({
@@ -32,8 +36,11 @@ export class HomepageComponent implements OnInit {
     public commentService: CommentService
   ) {}
 
-  onPostDelete(postId: number) {
-    this.postsList = this.postsList.filter((post) => post.id !== postId);
+  onPostDelete() {
+    this.loadPosts()
+  }
+
+  onPostEdit() {
     this.loadPosts()
   }
 

@@ -11,6 +11,17 @@
     <button
       mat-fab
       style="background-color: #BA4A00; color: white;"
+      aria-label="Example icon button with a edit icon"
+      matTooltip="Edit Post"
+      (click)="openDialogEditPosts()"
+      *appPermission="'admin'"
+    >
+      <mat-icon>edit</mat-icon>
+    </button>
+
+    <button
+      mat-fab
+      style="background-color: #BA4A00; color: white;"
       aria-label="Example icon button with a delete icon"
       matTooltip="Delete Post"
       (click)="deletePost()"

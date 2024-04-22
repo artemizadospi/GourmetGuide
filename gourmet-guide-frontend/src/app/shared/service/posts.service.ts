@@ -30,16 +30,7 @@ export class PostService {
   }
 
   getAllPosts(page: number, size: number): Observable<any> {
-    const token = localStorage.getItem('auth-token');
-    const headers = new HttpHeaders({
-        Authorization: `${token}`
-    });
-    const httpOptions = {
-        headers: headers
-    };
     const url = `${environment.apiUrl + '/posts'}?page=${page}&size=${size}`;
-    console.log(token)
-    console.log(url)
     return this.http.get(url);
   }
 
@@ -55,6 +46,18 @@ export class PostService {
 
   deletePost(postId: number): Observable<any> {
     return this.http.delete(environment.apiUrl + '/posts/' + postId);
+  }
+
+  editPost(postId: number, title: string,
+    text: string,
+    cop: string,
+    image: File): Observable<any> {
+    const formData = new FormData();
+    formData.append('text', text);
+    formData.append('title', title);
+    formData.append('cop', cop);
+    formData.append('image', image);
+    return this.http.put(environment.apiUrl + '/posts/' + postId, formData);
   }
 
   putSelectPin(postId: number): Observable<Post> {

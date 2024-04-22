@@ -1,7 +1,8 @@
 <div class="container" fxLayout fxLayoutAlign="center" fxLayoutGap="10px" fxLayoutGap.xs="0">
   <div class="cards-container">
     <app-posts-card
-      (deleted)="onPostDelete(post.id)"
+      (deleted)="onPostDelete()"
+      (edited)="onPostEdit()"
       *ngFor="let post of postsList"
       [post]="post"
     ></app-posts-card>

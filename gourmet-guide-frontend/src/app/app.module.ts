@@ -39,6 +39,8 @@ import { CommentsPopUpComponent } from './posts/components/comments-pop-up/comme
 import { PermissionDirective } from './posts/directives/permission.directive';
 import { SignupComponent } from './auth/pages/signup/signup.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { EditPostComponent } from './posts/components/edit-post/edit-post.component';
+import { ConfirmationDialogComponent } from './posts/components/confirmation-dialog/confirmation-dialog.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     PostCardComponent,
     CommentsPopUpComponent,
     PermissionDirective,
-    SignupComponent
+    SignupComponent,
+    EditPostComponent,
+    ConfirmationDialogComponent
   ],
   imports: [
     BrowserModule,
