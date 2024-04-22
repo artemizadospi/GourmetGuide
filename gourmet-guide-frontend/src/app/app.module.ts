@@ -32,6 +32,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/pages/login/login.component';
 import { HomepageComponent } from './posts/pages/homepage/homepage.component';
 import { AuthenticationInterceptor } from './auth/helpers/authentication.interceptor';
+import { CreatePostComponent } from './admin/pages/create-post/create-post.component';
 import { DialogOverviewComponent } from './posts/components/dialog-overview/dialog-overview.component';
 import { PostCardComponent } from './posts/components/posts-card/posts-card.component';
 import { CommentsPopUpComponent } from './posts/components/comments-pop-up/comments-pop-up.component';
@@ -45,6 +46,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     LoginComponent,
     SignupComponent,
     HomepageComponent,
+    CreatePostComponent,
     DialogOverviewComponent,
     PostCardComponent,
     CommentsPopUpComponent,

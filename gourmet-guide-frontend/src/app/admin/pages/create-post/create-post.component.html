@@ -1,0 +1,76 @@
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+  <mat-card fxFlex="35">
+    <mat-toolbar class="header">
+      <mat-toolbar-row>
+        <span>Create Post</span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <form
+      [formGroup]="form"
+      class="myForm"
+      (ngSubmit)="submitDetails(form)"
+      fxLayoutAlign="stretch"
+      fxLayout="column"
+    >
+    <mat-form-field appearance="standard" class="myInput">
+      <mat-label> Title </mat-label>
+      <input
+        matInput
+        placeholder="Type description"
+        formControlName="title"
+        #textInput
+      />
+    </mat-form-field>
+
+      <mat-form-field appearance="standard" class="myInput">
+        <mat-label> Recipe (max. 280 char) </mat-label>
+        <input
+          matInput
+          placeholder="Type description"
+          formControlName="text"
+          #textInput
+        />
+      </mat-form-field>
+
+      <mat-form-field appearance="standard" class="myInput">
+        <mat-label> CoP (Starter, MainCourse or Dessert) </mat-label>
+        <input
+          matInput
+          placeholder="Type CoP"
+          formControlName="cop"
+          #topicsInput
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <div>
+          <mat-toolbar>
+            <input
+              matInput
+              [value]="
+                selectedFileNames.length ? selectedFileNames : 'Upload an image'
+              "
+            />
+          </mat-toolbar>
+
+          <input
+            type="file"
+            id="fileInput"
+            formControlName="image"
+            accept="image/*"
+            multiple
+            (change)="selectFiles($event)"
+          />
+        </div>
+      </mat-form-field>
+      <button
+        mat-raised-button
+        style="background-color: #BA4A00; color: white;"
+        type="submit"
+        class="myButton"
+        [disabled]="!form.valid"
+      >
+        Submit
+      </button>
+    </form>
+  </mat-card>
+</div>

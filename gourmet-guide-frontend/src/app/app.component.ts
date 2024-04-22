@@ -28,6 +28,10 @@ export class AppComponent {
     this.router.navigate(['login']);
   }
 
+  createPostClicked() {
+    this.router.navigate(['createPost']);
+  }
+
   homepageClicked() {
     this.commentService.pageIndex = 0
     this.router.navigate(['homepage']);

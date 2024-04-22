@@ -16,8 +16,8 @@ export class PostService {
   constructor(private http: HttpClient) {}
 
   createPost(
-    text: string,
     title: string,
+    text: string,
     cop: string,
     image: File
   ): Observable<Post> {
