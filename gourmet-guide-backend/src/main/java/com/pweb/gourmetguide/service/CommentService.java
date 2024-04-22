@@ -42,7 +42,8 @@ public class CommentService {
         return commentsPage.map(comments -> new ResponseCommentDTO(
                 userRepository.getUserById(comments.getUserId()).getLastName() + " " +
                         userRepository.getUserById(comments.getUserId()).getFirstName(),
-                comments.getText(), commentsPage.getTotalElements()
+                comments.getText(), comments.getDate(), userRepository.getUserById(comments.getUserId()).getRole().toString(),
+                commentsPage.getTotalElements()
         ));
     }
 
@@ -80,7 +81,7 @@ public class CommentService {
                 commentValue.getText(), commentValue.getDate());
     }
 
-    public ResponsePostDTO commentOnPostById(@PathVariable(name = "id") int id, @RequestBody String comment, HttpServletRequest http) {
+    public ResponsePostDTO commentOnPostById(int id, String comment, HttpServletRequest http) {
         Post rezPost = postRepository.getPostsById(id);
 
         if (rezPost == null) {

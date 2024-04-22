@@ -1,8 +1,25 @@
 <mat-card *ngFor="let comment of commentList">
-  <mat-card-subtitle>{{ comment.userName }}</mat-card-subtitle>
-
-  <mat-card-content
-    ><p>{{ comment.text }}</p></mat-card-content>
+  <mat-card-header>
+    <img
+      mat-card-avatar
+      src="../../../../assets/blank-profile-picture-g19ba23f36_640.png"
+    />
+    <div class="user-info">
+      <div class="user-name-role">
+        <mat-card-subtitle class="user-name">{{ comment.userName }}</mat-card-subtitle>
+        <mat-card-subtitle class="user-role">{{ comment.userRole }}</mat-card-subtitle>
+      </div>
+      <mat-card-subtitle class="publish-date">Posted at
+        {{
+          comment.date.toLocaleString().split("T")[0] +
+            " " +
+            comment.date.toLocaleString().split("T")[1].split(".")[0]
+        }}</mat-card-subtitle>
+    </div>
+  </mat-card-header>
+<mat-card-content>
+  <p>{{ comment.text }}</p>
+</mat-card-content>
 </mat-card>
 <div class="bottom-paginator">
   <mat-paginator *ngIf="totalComments >= 4" [length]="totalComments" [pageSize]="4" (page)="onPageChange($event)"></mat-paginator>

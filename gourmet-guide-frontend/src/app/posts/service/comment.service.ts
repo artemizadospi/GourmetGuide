@@ -15,7 +15,6 @@ export class CommentService {
 
   getAllCommentsByPostId(page: number, size: number, postId: number): Observable<any> {
     const url = `${environment.apiUrl + '/posts/' + postId + '/comments'}?page=${page}&size=${size}`;
-    console.log("page nrrrrrrr" + page)
     return this.http.get(url);
   }
 

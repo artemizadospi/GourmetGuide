@@ -88,6 +88,7 @@ public class PostService {
         }
 
         postRepository.deleteById(id);
+        postRepository.deleteById(id);
     }
 
     public ResponsePostDTO pinPostById(int id) {
