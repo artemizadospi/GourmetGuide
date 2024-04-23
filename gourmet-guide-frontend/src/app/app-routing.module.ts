@@ -7,10 +7,12 @@ import { EditPostComponent } from './posts/components/edit-post/edit-post.compon
 import { IsAuthenticatedGuard } from './auth/helpers/is-authenticated.guard';
 import { CreatePostComponent } from './admin/pages/create-post/create-post.component';
 import { AdminGuard } from './auth/helpers/admin.guard';
+import { FeedbackpageComponent } from './posts/pages/feedbackpage/feedbackpage.component';
 
 const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'feedback', component: FeedbackpageComponent },
   {
     path: 'homepage',
     component: HomepageComponent,

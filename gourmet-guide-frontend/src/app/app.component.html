@@ -12,6 +12,15 @@
           >
           <mat-icon class="homepage-icon">home</mat-icon>
         </button>
+
+        <button
+          matTooltip="Feedback"
+          class="home-button"
+          (click)="feedbackClicked()"
+          *ngIf="router.url !== '/login' && router.url !== '/signup'"
+          >
+          <mat-icon class="profile-icon">chat_bubble</mat-icon>
+        </button>
         
         <div class="spacer"></div>
         

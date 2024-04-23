@@ -37,6 +37,10 @@ export class AppComponent {
     this.router.navigate(['homepage']);
   }
 
+  feedbackClicked() {
+    this.router.navigate(['feedback']);
+  }
+
   filterClick(cop: string) {
     this.commentService.pageIndex = 0
     this.router.navigate(['homepage'], {

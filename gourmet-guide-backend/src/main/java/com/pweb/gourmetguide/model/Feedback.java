@@ -28,5 +28,11 @@ public class Feedback {
     private String email;
     @Column
     private String message;
+    @Column
+    private String selectOption;
+    @Column
+    private String radioButtonOption;
+    @Column
+    private boolean checkBoxOption;
 }
 

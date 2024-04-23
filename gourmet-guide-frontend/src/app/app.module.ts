@@ -27,6 +27,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/pages/login/login.component';
@@ -42,6 +43,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { EditPostComponent } from './posts/components/edit-post/edit-post.component';
 import { ConfirmationDialogComponent } from './posts/components/confirmation-dialog/confirmation-dialog.component';
 import { EditCommentComponent } from './posts/components/edit-comment/edit-comment.component';
+import { FeedbackpageComponent } from './posts/pages/feedbackpage/feedbackpage.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +59,8 @@ import { EditCommentComponent } from './posts/components/edit-comment/edit-comme
     SignupComponent,
     EditPostComponent,
     ConfirmationDialogComponent,
-    EditCommentComponent
+    EditCommentComponent,
+    FeedbackpageComponent
   ],
   imports: [
     BrowserModule,
@@ -87,6 +90,7 @@ import { EditCommentComponent } from './posts/components/edit-comment/edit-comme
     HttpClientModule,
     FontAwesomeModule,
     MatPaginatorModule,
+    MatCheckboxModule
   ],
 
   providers: [
