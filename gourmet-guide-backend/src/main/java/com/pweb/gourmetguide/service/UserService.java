@@ -7,6 +7,7 @@ import com.pweb.gourmetguide.exception.InvalidCredentialsException;
 import com.pweb.gourmetguide.exception.UserNotFoundException;
 import com.pweb.gourmetguide.model.Role;
 import com.pweb.gourmetguide.model.User;
+import com.pweb.gourmetguide.repository.RoleRepository;
 import com.pweb.gourmetguide.security.CustomUserDetails;
 import com.pweb.gourmetguide.security.CustomUserDetailsService;
 import lombok.RequiredArgsConstructor;
@@ -15,13 +16,17 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import com.pweb.gourmetguide.repository.UserRepository;
 
+import java.util.Optional;
+
 @Service
 @RequiredArgsConstructor
 public class UserService {
+
     private final JWTUtils jwtUtils;
     private final CustomUserDetailsService userDetailsService;
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
+    private final RoleRepository roleRepository;
 
     public LoginResponse login(LoginRequest loginRequest) {
         BCryptPasswordEncoder bcryptEncoder = new BCryptPasswordEncoder();
@@ -43,12 +48,13 @@ public class UserService {
     }
     public User addUser(SignUpRequest signUpRequest) {
         User user = new User();
+        Optional<Role> userRole = roleRepository.findById(2);
         user.setLastName(signUpRequest.getLastname());
         user.setFirstName(signUpRequest.getFirstname());
         user.setUsername(signUpRequest.getUsername());
         user.setPassword(passwordEncoder.encode(signUpRequest.getPassword()));
         user.setEmail(signUpRequest.getEmail());
-        user.setRole(Role.user);
+        userRole.ifPresent(user::setRole);
         return userRepository.save(user);
     }
 }

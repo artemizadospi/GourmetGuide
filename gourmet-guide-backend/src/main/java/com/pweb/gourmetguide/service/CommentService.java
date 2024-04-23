@@ -40,7 +40,7 @@ public class CommentService {
         return commentsPage.map(comments -> new ResponseCommentDTO(comments.getId(),
                 userRepository.getUserById(comments.getUserId()).getLastName() + " " +
                         userRepository.getUserById(comments.getUserId()).getFirstName(),
-                comments.getText(), comments.getDate(), userRepository.getUserById(comments.getUserId()).getRole().toString(),
+                comments.getText(), comments.getDate(), userRepository.getUserById(comments.getUserId()).getRole().getValue(),
                 commentsPage.getTotalElements()
         ));
     }
@@ -83,7 +83,7 @@ public class CommentService {
             return new ResponseCommentDTO(commentValue.getId(),
                     userRepository.getUserById(commentValue.getUserId()).getLastName() + " " +
                             userRepository.getUserById(commentValue.getUserId()).getFirstName(),
-                    commentValue.getText(), commentValue.getDate(), userRepository.getUserById(commentValue.getUserId()).getRole().toString(),
+                    commentValue.getText(), commentValue.getDate(), userRepository.getUserById(commentValue.getUserId()).getRole().getValue(),
                     1);
         } else {
             throw new CommentConflictException();
