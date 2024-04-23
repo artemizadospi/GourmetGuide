@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.pweb.gourmetguide.dtos.UserCommentDTO;
 import javax.servlet.http.HttpServletRequest;
 
 @RestController
@@ -25,7 +24,7 @@ public class CommentController {
     private final CommentService commentService;
 
     @GetMapping("/{id}/comments")
-    public Page<ResponseCommentDTO> getPostCommentsById(@PathVariable(name = "id") int id, @PageableDefault(size=4) final Pageable pageable) {
+    public Page<ResponseCommentDTO> getPostCommentsById(@PathVariable(name = "id") int id, @PageableDefault(size=3) final Pageable pageable) {
         return commentService.getPostCommentsById(id, pageable);
     }
 
@@ -36,7 +35,7 @@ public class CommentController {
     }
 
     @PutMapping("{postId}/comments/{commentId}")
-    public UserCommentDTO updateCommentById(@PathVariable(name = "postId") int postId, @PathVariable(name = "commentId") int commentId, @RequestBody String text, HttpServletRequest http) {
+    public ResponseCommentDTO updateCommentById(@PathVariable(name = "postId") int postId, @PathVariable(name = "commentId") int commentId, @RequestBody String text, HttpServletRequest http) {
         return commentService.updateCommentById(postId, commentId, text, http);
     }
 

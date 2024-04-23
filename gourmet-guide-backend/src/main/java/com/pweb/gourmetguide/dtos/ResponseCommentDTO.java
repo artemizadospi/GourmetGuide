@@ -13,6 +13,7 @@ import java.util.Date;
 @Getter
 @Setter
 public class ResponseCommentDTO {
+    private int id;
     private String userName;
     private String text;
     private Date date;

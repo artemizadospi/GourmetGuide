@@ -2,7 +2,6 @@ package com.pweb.gourmetguide.service;
 
 import com.pweb.gourmetguide.dtos.ResponseCommentDTO;
 import com.pweb.gourmetguide.dtos.ResponsePostDTO;
-import com.pweb.gourmetguide.dtos.UserCommentDTO;
 import com.pweb.gourmetguide.exception.CommentNotFoundException;
 import com.pweb.gourmetguide.exception.CommentConflictException;
 import com.pweb.gourmetguide.exception.PostNotFoundException;
@@ -38,7 +37,7 @@ public class CommentService {
 
         Page<UserComment> commentsPage = commentRepository.getAllCommentsByPostId(id, pageable);
 
-        return commentsPage.map(comments -> new ResponseCommentDTO(
+        return commentsPage.map(comments -> new ResponseCommentDTO(comments.getId(),
                 userRepository.getUserById(comments.getUserId()).getLastName() + " " +
                         userRepository.getUserById(comments.getUserId()).getFirstName(),
                 comments.getText(), comments.getDate(), userRepository.getUserById(comments.getUserId()).getRole().toString(),
@@ -65,7 +64,7 @@ public class CommentService {
         }
     }
 
-    public UserCommentDTO updateCommentById(int postId, int commentId, String text, HttpServletRequest http) {
+    public ResponseCommentDTO updateCommentById(int postId, int commentId, String text, HttpServletRequest http) {
         Post rezPost = postRepository.getPostsById(postId);
         if (rezPost == null) {
             throw new PostNotFoundException();
@@ -81,8 +80,11 @@ public class CommentService {
             if (!text.isEmpty())
                 commentValue.setText(text);
             commentRepository.save(commentValue);
-            return new UserCommentDTO(commentValue.getId(), commentValue.getUserId(), commentValue.getPost().getId(),
-                    commentValue.getText(), commentValue.getDate());
+            return new ResponseCommentDTO(commentValue.getId(),
+                    userRepository.getUserById(commentValue.getUserId()).getLastName() + " " +
+                            userRepository.getUserById(commentValue.getUserId()).getFirstName(),
+                    commentValue.getText(), commentValue.getDate(), userRepository.getUserById(commentValue.getUserId()).getRole().toString(),
+                    1);
         } else {
             throw new CommentConflictException();
         }

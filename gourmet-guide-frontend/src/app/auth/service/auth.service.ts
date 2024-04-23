@@ -55,7 +55,7 @@ export class AuthService {
   }
   
   getName(): string | undefined {
-    return this._loggedInUser$.getValue()?.lastName + ' ' + this._loggedInUser$.getValue()?.firstName + '   ';
+    return this._loggedInUser$.getValue()?.lastName + ' ' + this._loggedInUser$.getValue()?.firstName;
   }
   
   getId(): number | undefined {

@@ -41,6 +41,7 @@ import { SignupComponent } from './auth/pages/signup/signup.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { EditPostComponent } from './posts/components/edit-post/edit-post.component';
 import { ConfirmationDialogComponent } from './posts/components/confirmation-dialog/confirmation-dialog.component';
+import { EditCommentComponent } from './posts/components/edit-comment/edit-comment.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { ConfirmationDialogComponent } from './posts/components/confirmation-dia
     PermissionDirective,
     SignupComponent,
     EditPostComponent,
-    ConfirmationDialogComponent
+    ConfirmationDialogComponent,
+    EditCommentComponent
   ],
   imports: [
     BrowserModule,

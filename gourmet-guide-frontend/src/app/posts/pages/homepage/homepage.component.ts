@@ -10,6 +10,7 @@ import { CommentService } from '../../service/comment.service';
 
 export interface DialogData {
   postId: number;
+  commentId: number;
   comment: string;
   title: string;
   text: string;

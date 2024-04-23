@@ -55,14 +55,6 @@ export class PostCardComponent implements OnInit {
   }
 
   deletePost() {
-    // this.postService.deletePost(this.post.id).subscribe({
-    //   next: () => {
-    //     this.deleted.emit();
-    //   },
-    //   error: () => {
-    //     this._snackBar.open('Delete failed!', 'Ok');
-    //   },
-    // });
     this.openDeleteConfirmationDialog();
   }
 

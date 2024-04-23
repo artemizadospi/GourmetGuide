@@ -58,3 +58,18 @@ bottom-paginator {
   color: #777;
 }
 
+.comment-card {
+  position: relative;
+}
+
+.button-group {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
+
+.delete-button, .edit-button {
+  color: #BA4A00;
+  width: 30px;
+  height: 30px;
+}

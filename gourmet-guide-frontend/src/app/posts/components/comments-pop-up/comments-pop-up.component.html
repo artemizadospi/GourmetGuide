@@ -20,7 +20,15 @@
 <mat-card-content>
   <p>{{ comment.text }}</p>
 </mat-card-content>
+<div class="button-group">
+  <button mat-icon-button color="warn" aria-label="Delete" *ngIf="isAdmin() || isOwner(comment)" (click)="onDelete(comment)" class="delete-button">
+    <mat-icon>delete</mat-icon>
+  </button>
+  <button mat-icon-button color="primary" aria-label="Edit" *ngIf="isAdmin() || isOwner(comment)" (click)="onEdit(comment)" class="edit-button">
+    <mat-icon>edit</mat-icon>
+  </button>
+</div>
 </mat-card>
 <div class="bottom-paginator">
-  <mat-paginator *ngIf="totalComments >= 4" [length]="totalComments" [pageSize]="4" (page)="onPageChange($event)"></mat-paginator>
+  <mat-paginator *ngIf="totalComments >= 3" [length]="totalComments" [pageSize]="3" (page)="onPageChange($event)"></mat-paginator>
 </div>

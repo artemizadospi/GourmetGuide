@@ -24,4 +24,16 @@ export class CommentService {
     );
   }
 
+  deleteComment(postId: number, commentId: number): Observable<any> {
+    return this.http.delete<Comment>(
+      environment.apiUrl + '/posts/' + postId + '/comments/' + commentId
+    );
+  }
+
+  editComment(postId: number, commentId: number, text: string): Observable<any> {
+    return this.http.put<Comment>(
+      environment.apiUrl + '/posts/' + postId + '/comments/' + commentId, text
+    );
+  }
+
 }

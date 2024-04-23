@@ -1,0 +1,18 @@
+<div mat-dialog-content>
+    <p>Please edit comment</p>
+    <mat-form-field appearance="fill">
+      <input matInput [(ngModel)]="data.comment" />
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button
+      mat-button
+      [mat-dialog-close]="data.comment"
+      cdkFocusInitial
+      (click)="onEditClick()"
+    >
+      Save
+    </button>
+  </div>
+  
