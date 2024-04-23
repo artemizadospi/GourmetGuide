@@ -12,7 +12,9 @@ import { FeedbackpageComponent } from './posts/pages/feedbackpage/feedbackpage.c
 const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'feedback', component: FeedbackpageComponent },
+  { path: 'feedback', component: FeedbackpageComponent,
+    canActivate: [IsAuthenticatedGuard]
+  },
   {
     path: 'homepage',
     component: HomepageComponent,
