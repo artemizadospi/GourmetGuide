@@ -53,6 +53,4 @@ public class Post {
     private Set<UserComment> comments;
     @Column
     private String cop;
-    @Column(name = "current_user_like")
-    private boolean likedByCurrentUser;
 }

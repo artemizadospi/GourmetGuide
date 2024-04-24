@@ -66,7 +66,7 @@ public class PostService {
         ));
 
         if (responsePostsPage.isEmpty()) {
-            throw new PostNotFoundException();
+            return Page.empty();
         }
 
         return responsePostsPage;
@@ -118,7 +118,6 @@ public class PostService {
         createdPost.setPublishDate(new Date());
         createdPost.setCop(cop);
         createdPost.setTitle(title);
-        createdPost.setLikedByCurrentUser(false);
         User user = getLoggedInUser(http.getHeader("Authorization"));
         createdPost.setPublisher(user);
 

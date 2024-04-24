@@ -42,7 +42,7 @@ export class EditPostComponent implements OnInit {
     this.form = this.fb.group({
       title: [data.title, [Validators.required, Validators.maxLength(288)]],
 
-      text: [data.text, [Validators.required, Validators.maxLength(288)]],
+      text: [data.text, [Validators.required]],
 
       image: [data.image],
 

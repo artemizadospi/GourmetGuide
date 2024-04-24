@@ -14,16 +14,13 @@ import { PostService } from 'src/app/shared/service/posts.service';
 export class CreatePostComponent implements OnInit {
   selectedFiles?: FileList;
   selectedFileNames: File[] = [];
-
   progressInfos: any[] = [];
   message: string[] = [];
-
   previews: string[] = [];
   imageInfos?: Observable<any>;
-
   localUrl!: any[];
-
   form: FormGroup;
+  categories: string[] = ['Starter', 'MainCourse', 'Dessert'];
 
   constructor(
     private postService: PostService,
@@ -35,7 +32,7 @@ export class CreatePostComponent implements OnInit {
     this.form = this.fb.group({
       title: [null, [Validators.required, Validators.maxLength(288)]],
 
-      text: [null, [Validators.required, Validators.maxLength(288)]],
+      text: [null, [Validators.required]],
 
       image: [null],
 

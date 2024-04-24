@@ -57,9 +57,9 @@
     <p>
       {{ post.title }}
     </p>
-    <p>
-      {{ post.text }}
-    </p>
+    <div *ngFor="let line of post.text.split('\n')">
+      {{ line }}<br>
+    </div>
   </mat-card-content>
 
   <mat-card-actions>

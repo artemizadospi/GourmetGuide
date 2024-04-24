@@ -13,33 +13,36 @@
       fxLayout="column"
     >
     <mat-form-field appearance="standard" class="myInput">
-      <mat-label> Title </mat-label>
+      <mat-label> Title (max. 280 char) </mat-label>
       <input
         matInput
-        placeholder="Type description"
+        placeholder="Type title"
         formControlName="title"
         #textInput
       />
     </mat-form-field>
 
       <mat-form-field appearance="standard" class="myInput">
-        <mat-label> Recipe (max. 280 char) </mat-label>
-        <input
+        <mat-label> Recipe </mat-label>
+        <textarea
           matInput
-          placeholder="Type description"
+          placeholder="Type recipe"
           formControlName="text"
           #textInput
-        />
+        ></textarea>
       </mat-form-field>
 
       <mat-form-field appearance="standard" class="myInput">
-        <mat-label> CoP (Starter, MainCourse or Dessert) </mat-label>
-        <input
+        <mat-label> Category </mat-label>
+        <mat-select formControlName="cop">
+          <mat-option *ngFor="let category of categories" [value]="category">{{ category }}</mat-option>
+        </mat-select>
+        <!-- <input
           matInput
           placeholder="Type CoP"
           formControlName="cop"
           #topicsInput
-        />
+        /> -->
       </mat-form-field>
       <mat-form-field>
         <div>
