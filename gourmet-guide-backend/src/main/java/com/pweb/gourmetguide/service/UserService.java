@@ -2,7 +2,7 @@ package com.pweb.gourmetguide.service;
 
 import com.pweb.gourmetguide.dtos.LoginRequest;
 import com.pweb.gourmetguide.dtos.LoginResponse;
-import com.pweb.gourmetguide.dtos.SignUpRequest;
+import com.pweb.gourmetguide.dtos.SignUpDTO;
 import com.pweb.gourmetguide.exception.InvalidCredentialsException;
 import com.pweb.gourmetguide.exception.UserNotFoundException;
 import com.pweb.gourmetguide.model.Role;
@@ -44,17 +44,19 @@ public class UserService {
         if (user == null) {
             throw new UserNotFoundException();
         }
-        return userRepository.save(user);
+        return user;
     }
-    public User addUser(SignUpRequest signUpRequest) {
+    public SignUpDTO addUser(SignUpDTO signUpDTO) {
         User user = new User();
         Optional<Role> userRole = roleRepository.findById(2);
-        user.setLastName(signUpRequest.getLastname());
-        user.setFirstName(signUpRequest.getFirstname());
-        user.setUsername(signUpRequest.getUsername());
-        user.setPassword(passwordEncoder.encode(signUpRequest.getPassword()));
-        user.setEmail(signUpRequest.getEmail());
+        user.setLastName(signUpDTO.getLastname());
+        user.setFirstName(signUpDTO.getFirstname());
+        user.setUsername(signUpDTO.getUsername());
+        user.setPassword(passwordEncoder.encode(signUpDTO.getPassword()));
+        user.setEmail(signUpDTO.getEmail());
         userRole.ifPresent(user::setRole);
-        return userRepository.save(user);
+        User savedUser = userRepository.save(user);
+        return new SignUpDTO(savedUser.getLastName(), savedUser.getFirstName(),
+                savedUser.getUsername(), savedUser.getPassword(), savedUser.getEmail());
     }
 }

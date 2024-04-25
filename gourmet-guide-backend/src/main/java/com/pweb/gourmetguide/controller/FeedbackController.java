@@ -25,9 +25,4 @@ public class FeedbackController {
     public FeedbackResponse saveFeedback(@RequestBody FeedbackRequest feedbackRequest) {
         return feedbackService.addFeedback(feedbackRequest);
     }
-
-    @GetMapping
-    public List<Feedback> getAllFeedback() {
-        return feedbackRepository.findAll();
-    }
 }

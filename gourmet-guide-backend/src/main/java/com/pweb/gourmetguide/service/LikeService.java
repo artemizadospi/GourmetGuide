@@ -18,20 +18,7 @@ import java.util.stream.Collectors;
 public class LikeService {
 
     private final PostRepository postRepository;
-    private final UserRepository userRepository;
     private final PostService postService;
-
-    public List<String> getPostLikesById(int id) {
-        Post rezPost = postRepository.getPostsById(id);
-
-        if (rezPost == null) {
-            throw new PostNotFoundException();
-        }
-
-        return rezPost.getLikes().stream()
-                .map(like -> userRepository.getUserById(like.getUserId()).getLastName() + " " +
-                        userRepository.getUserById(like.getUserId()).getFirstName()).collect(Collectors.toList());
-    }
 
     public ResponsePostDTO likePostById(int id, HttpServletRequest http) throws Exception {
         Post rezPost = postRepository.getPostsById(id);

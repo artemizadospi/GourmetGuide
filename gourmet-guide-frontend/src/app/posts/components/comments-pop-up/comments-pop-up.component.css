@@ -40,6 +40,7 @@ bottom-paginator {
 .user-name-role {
   display: flex;
   align-items: baseline;
+  margin-bottom: -10px;
 }
 
 .user-name {
@@ -56,6 +57,8 @@ bottom-paginator {
 .publish-date {
   font-size: 10px;
   color: #777;
+  font-weight: normal;
+  margin-top: 10px;
 }
 
 .comment-card {

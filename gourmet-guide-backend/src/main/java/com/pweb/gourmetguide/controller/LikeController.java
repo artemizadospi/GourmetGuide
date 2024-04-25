@@ -18,11 +18,6 @@ public class LikeController {
 
     private final LikeService likeService;
 
-    @GetMapping("/{id}/likes")
-    public List<String> getPostLikesById(@PathVariable(name = "id") int id) {
-        return likeService.getPostLikesById(id);
-    }
-
     @PutMapping("/{id}/like")
     public ResponsePostDTO likePostById(@PathVariable(name = "id") int id, HttpServletRequest http) throws Exception {
         return likeService.likePostById(id, http);

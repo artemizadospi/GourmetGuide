@@ -67,10 +67,10 @@ export class PostService {
       );
     }
       
-        putLikePost(postId: number): Observable<Post> {
-          return this.http.put<Post>(
-            environment.apiUrl + '/posts/' + postId + '/like',
-            postId
-          );
-        }
+  putLikePost(postId: number): Observable<Post> {
+    return this.http.put<Post>(
+      environment.apiUrl + '/posts/' + postId + '/like',
+      postId
+    );
+  }
 }  

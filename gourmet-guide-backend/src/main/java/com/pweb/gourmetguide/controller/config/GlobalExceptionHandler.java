@@ -3,6 +3,7 @@ package com.pweb.gourmetguide.controller.config;
 import com.pweb.gourmetguide.exception.CommentConflictException;
 import com.pweb.gourmetguide.exception.CommentNotFoundException;
 import com.pweb.gourmetguide.exception.InvalidCredentialsException;
+import com.pweb.gourmetguide.exception.InvalidUsernameException;
 import com.pweb.gourmetguide.exception.PostNotFoundException;
 import com.pweb.gourmetguide.exception.UserNotFoundException;
 import org.springframework.http.HttpHeaders;
@@ -38,5 +39,10 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(value = CommentConflictException.class)
     public ResponseEntity<Object> handleCommentConflictException() {
         return new ResponseEntity<>("Access to comment denied!", new HttpHeaders(), HttpStatus.UNAUTHORIZED);
+    }
+
+    @ExceptionHandler(value = InvalidUsernameException.class)
+    public ResponseEntity<Object> handleInvalidUsernameException() {
+        return new ResponseEntity<>("Wrong username, please try again!", new HttpHeaders(), HttpStatus.BAD_REQUEST);
     }
 }
